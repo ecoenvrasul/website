@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
+            $table->string('fname');
+            $table->string('lname');
+            $table->string('phone')->unique();
+            $table->string('password');
+            $table->enum('role', ['admin', 'assistant']);
             $table->timestamps();
         });
     }

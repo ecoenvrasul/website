@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class EmployeeController extends Controller
 {
     public function index(){
-        return "Hello dear employee";
+        $employees = Employee::all();
+        return view('main', ['employees' => $employees]);
     }
 
 }

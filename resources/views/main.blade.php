@@ -10,7 +10,13 @@
 
 <body>
 
-
+    <div>
+        <h3>
+            @foreach ($employees as $employee)
+            {{ $employee."\n" }}
+            @endforeach
+        </h3>
+    </div>
 
 </body>
 
