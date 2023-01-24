@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\EmployeeController;
+use App\Models\Employee;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +16,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/main', [PageController::class, 'main']);
 
-Route::get('employee', [EmployeeController::class, 'index']);
-
-
-Route::get('/route', function(){
-    return view('main');
-});
